@@ -249,6 +249,14 @@
     color: $white-normal;
 }
 
+@media screen and (max-width: 768px){
+    .footer{
+        p{
+            font-size: 10px;
+        }
+    }
+}
+
 //botao whats
 
 .btn-whats{
