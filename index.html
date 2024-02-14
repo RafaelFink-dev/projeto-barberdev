@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,18 +42,37 @@
                 </div>
 
                 <div class="header-logo" data-aos="fade-up" data-aos-delay="300">
-                    <img data-aos="flip-up" data-aos-delay="300" data-aos-duration="1500" src="/images/logo.svg" alt="Logo Barbearia">
+                    <img data-aos="flip-up" data-aos-delay="300" data-aos-duration="1500" src="/images/logo.svg"
+                        alt="Logo Barbearia">
                 </div>
 
-                <div class="header-button" data-aos="fade-down">
-                    <a href="https://api.whatsapp.com/send?phone=5551996026658&text=Quero%20fazer%20um%20agendamento%20hoje!" target="_blank">Agendar horário</a>
+                <div class="header-button">
+                    <a href="#demo-modal">Sobre nós</a>
+                </div>
+
+                <!--MODAL-->
+                <div id="demo-modal" class="modal">
+                    <div class="modal-content">
+                        <h1>CONHEÇA NOSSOS BARBEIROS!</h1>
+
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+
+                        <div class="modal-footer">
+                            <a href="#" class="modal-footer-btn-close"> Fechar </a>
+                        </div>
+
+                        <a href="#" class="modal-close">&times;</a>
+                    </div>
                 </div>
             </nav>
 
             <main class="hero container" data-aos="fade-up" data-aos-delay="400">
                 <h1>ESTILO É UM REFLEXO DA SUA ATITUDE E PERSONALIDADE.</h1>
                 <p>Horário de funcionamento: 09:00 ás 19:00</p>
-                <a href="https://api.whatsapp.com/send?phone=5551996026658&text=Quero%20fazer%20um%20agendamento%20hoje!" class="button-contact" target="_blank">
+                <a href="https://api.whatsapp.com/send?phone=5551996026658&text=Quero%20fazer%20um%20agendamento%20hoje!"
+                    class="button-contact" target="_blank">
                     Agendar horário
                 </a>
             </main>
@@ -129,20 +148,6 @@
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <footer class="footer">
-        <div class="footer-icons">
-            <a href="#">
-                <i class="fa-brands fa-instagram fa-2x"></i>
-            </a>
-
-            <a href="#">
-                <i class="fa-brands fa-facebook fa-2x"></i>
-            </a>
-
-            <a href="#">
-                <i class="fa-brands fa-tiktok fa-2x"></i>
-            </a>
-        </div>
-
         <div>
             <img src="images/logo.svg" alt="Logo Barbearia">
         </div>
@@ -151,7 +156,8 @@
     </footer>
 
     <!--Botão whats-->
-    <a href="https://api.whatsapp.com/send?phone=5551996026658&text=Quero%20fazer%20um%20agendamento%20hoje!" class="btn-whats" target="_blank" data-aos="zoom-in-up" data-aos-delay="400">
+    <a href="https://api.whatsapp.com/send?phone=5551996026658&text=Quero%20fazer%20um%20agendamento%20hoje!"
+        class="btn-whats" target="_blank" data-aos="zoom-in-up" data-aos-delay="400">
         <img src="images/whatssapp.svg" alt="Botao whatssapp">
         <span class="tooltip-text">Agende seu horário</span>
     </a>
