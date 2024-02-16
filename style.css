@@ -243,6 +243,7 @@ i {
 }
 .hero h1 {
   text-align: center;
+  align-items: center;
   line-height: 150%;
   max-width: 940px;
   font-size: 48px;
