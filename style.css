@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -74,7 +75,7 @@ i {
     margin-top: 46px;
   }
   .header-button {
-    display: none;
+    margin-top: 50px;
   }
 }
 .modal {
@@ -102,10 +103,15 @@ i {
   background-color: #ffffff;
   border-radius: 4px;
   position: relative;
-  width: 500px;
-  max-width: 90%;
+  max-height: 80vh;
+  max-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #fff;
   padding: 1em 2em;
+  overflow-y: auto;
+  /* ativa o scroll vertical se necessário */
 }
 
 .modal-footer {
@@ -130,10 +136,77 @@ i {
   border-radius: 3px;
 }
 
+.sobrenos-infos {
+  display: flex;
+  justify-content: left;
+  margin: 15px;
+}
+
+.barber1 {
+  display: flex;
+  flex-direction: row; /* Manter a direção da linha para ter a imagem e o texto lado a lado */
+  justify-content: flex-start; /* Alinhar itens à esquerda */
+  align-items: center; /* Garantir que ambos ocupem a altura total do contêiner */
+  padding: 10px;
+  background-color: #edeaef;
+  border-radius: 10px;
+}
+
+.barber-info {
+  flex: 1;
+  padding: 0 15px;
+  text-align: justify;
+  align-self: stretch;
+  font-size: 14px;
+}
+
+.barber-image {
+  max-width: 40%;
+  max-height: 90%; /* Defina a altura máxima desejada para a imagem */
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    max-width: 90%;
+    font-size: 14px;
+  }
+  .sobrenos-infos {
+    max-width: 90%;
+  }
+  .barber1 {
+    flex-direction: column;
+  }
+  .barber-image {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 8px;
+}
+
+/* Estilo básico */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+/* Cor de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Cor da alça (barra) */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* Cor ao passar o mouse sobre a alça */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 
 .bg-home {
@@ -173,20 +246,40 @@ i {
 }
 .hero p {
   text-align: center;
-  margin: 14px 0;
+  margin: 20px 0;
+  margin-bottom: 20px;
+}
+
+.buttonsPosition {
+  display: flex;
+  flex-direction: row;
 }
 
 .button-contact {
   padding: 14px 28px;
   color: #ffffff;
-  background-color: #D94140;
+  background-color: green;
   border: 0;
   font-size: 18px;
   font-weight: 600;
-  margin: 14px 0;
+  margin: 5px 5px;
+}
+
+.button-contact2 {
+  padding: 14px 42px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 0;
+  margin: 5px 5px;
+  background-color: #D94140;
+  color: #ffffff;
 }
 
 .button-contact:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+.button-contact2:hover {
   animation: scaleButton 0.8s alternate infinite;
 }
 
@@ -209,6 +302,10 @@ i {
   }
   .hero p {
     font-size: 14px;
+  }
+  .hero .buttonsPosition {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 480px) {

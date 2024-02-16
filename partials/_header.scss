@@ -1,39 +1,40 @@
-header{
+header {
     width: 100%;
 }
 
-.header-content{
+.header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-i{
+i {
     color: $white-normal;
 }
 
-.header-icons{
+.header-icons {
     display: flex;
     gap: 14px;
 }
 
-.header-icons a:hover{
-    i{
+.header-icons a:hover {
+    i {
         animation: translateY 0.8s infinite alternate;
         color: $red-light;
     }
 }
 
 @keyframes translateY {
-    from{
+    from {
         transform: translateY(0) scale(1);
     }
-    to{
-        transform: translateY(-8px) scale(1.1);        
+
+    to {
+        transform: translateY(-8px) scale(1.1);
     }
 }
 
-.header-button{
+.header-button {
     border: 1px solid $white-normal;
     padding: 8px 24px;
     border-radius: 4px;
@@ -41,12 +42,12 @@ i{
     transition: background-color 0.8s;
 }
 
-.header-button:hover{
+.header-button:hover {
     border: 1px solid $red-light;
     background-color: $red-light;
 }
 
-.header-logo{
+.header-logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,31 +56,33 @@ i{
 
 /*Ajuste para mobile*/
 
-@media screen and (max-width: 768px){
-    .header-content{
+@media screen and (max-width: 768px) {
+    .header-content {
         width: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
-        i{
+        i {
             margin-top: 16px;
             font-size: 34px;
         }
     }
 
-    .header-logo img{
+    .header-logo img {
         width: 160px;
         margin-top: 46px;
     }
 
-    .header-button{
-        display: none;
+    .header-button {
+       // display: none;
+       margin-top: 50px;
     }
+
 }
 
 //modal
-   
+
 .modal {
     visibility: hidden;
     opacity: 0;
@@ -94,42 +97,103 @@ i{
     background: rgba(77, 77, 77, 0.7);
     transition: all 0.4s;
     z-index: 999;
-  }
-   
+}
+
 .modal:target {
     visibility: visible;
     opacity: 1;
-  }
+}
 
- .modal-content{
+.modal-content {
     background-color: $white-normal;
     border-radius: 4px;
     position: relative;
-    width: 500px;
-    max-width: 90%;
+    max-height: 80vh;
+    max-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #fff;
     padding: 1em 2em;
-  }
+    overflow-y: auto;
+    /* ativa o scroll vertical se necessário */
+}
 
 
-  .modal-footer {
+.modal-footer {
     text-align: right;
     margin-top: 50px;
-  }
-   
-  .modal-close {
+}
+
+.modal-close {
     position: absolute;
     top: 10px;
     right: 10px;
     color: #585858;
     text-decoration: none;
-  }
-   
-  .modal-footer-btn-close {
+}
+
+.modal-footer-btn-close {
     width: 150px;
     padding: 10px;
     text-decoration: none;
     background-color: $red-light;
     color: $white-normal;
     border-radius: 3px;
-  }
+}
+
+//barbeiros
+
+.sobrenos-infos {
+    display: flex;
+    justify-content: left;
+    margin: 15px;
+}
+
+.barber1{
+    display: flex;
+    flex-direction: row; /* Manter a direção da linha para ter a imagem e o texto lado a lado */
+    justify-content: flex-start; /* Alinhar itens à esquerda */
+    align-items: center; /* Garantir que ambos ocupem a altura total do contêiner */
+    padding: 10px;
+    background-color:$white-dark;
+    border-radius: 10px;
+}
+
+.barber-info{
+    flex: 1;
+    padding: 0 15px;
+    text-align: justify;
+    align-self: stretch;
+    font-size: 14px;
+}
+
+.barber-image {
+    //margin-top: 30px;
+    //margin-left: 15px;
+    max-width: 40%;
+    max-height: 90%; /* Defina a altura máxima desejada para a imagem */
+    margin-right: 5px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content{
+        max-width: 90%;
+        font-size: 14px;
+    }
+
+    .sobrenos-infos{
+        max-width: 90%;
+    }
+
+    .barber1{
+        flex-direction: column;
+    }
+    
+    .barber-image{
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+}
