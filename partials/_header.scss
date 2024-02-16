@@ -164,7 +164,7 @@ i {
     flex: 1;
     padding: 0 15px;
     text-align: justify;
-    align-self: stretch;
+    align-items: stretch;
     font-size: 14px;
 }
 
@@ -181,6 +181,9 @@ i {
     .modal-content{
         max-width: 90%;
         font-size: 14px;
+        h1{
+            font-size: 15px;
+        }
     }
 
     .sobrenos-infos{
